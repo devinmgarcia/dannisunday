@@ -44,7 +44,7 @@ const Photos: React.FC = () => {
       {photos.map((photo) => (
         <div key={photo.id} className="overflow-hidden shadow-lg rounded-lg">
           <Image
-            src={`${url}${photo.attributes.image.data.attributes.url}`}
+            src={`${url}${encodeURIComponent(photo.attributes.image.data.attributes.url)}`}
             alt={photo.attributes.title}
             width={500}
             height={300}
