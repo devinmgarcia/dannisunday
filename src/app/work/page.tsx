@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 interface PhotoAttributes {
   title: string;
@@ -35,7 +35,7 @@ const Photos: React.FC = () => {
     })
     .then((response) => response.json())
     .then((data: ApiResponse) => setPhotos(data.data))
-    .catch((error) => console.error('Error fetching data:', error));
+    .catch((error) => console.error("Error fetching data:", error));
   }, [token]);
 
 
