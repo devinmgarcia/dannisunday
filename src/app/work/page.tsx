@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 interface PhotoAttributes {
   title: string;
@@ -42,7 +43,13 @@ const Photos: React.FC = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       {photos.map((photo) => (
         <div key={photo.id} className="overflow-hidden shadow-lg rounded-lg">
-          <img className="w-full h-auto" src={`${url}${photo.attributes.image.data.attributes.url}`} alt={photo.attributes.title} />
+          <Image
+            src={`${url}${photo.attributes.image.data.attributes.url}`}
+            alt={photo.attributes.title}
+            width={500}
+            height={300}
+            className="w-full h-auto"
+          />
           <div className="px-6 py-4">
             <h3 className="text-gray-900 font-bold text-xl mb-2">{photo.attributes.title}</h3>
             <p className="text-gray-700 text-base">{photo.attributes.description}</p>

@@ -8,7 +8,7 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Photographer</span>
             <h1 className="h1 mb-6">
-              Hello, I'm <br />
+              Hello, I&apos;m <br />
               <span className="text-accent">Danni Sunday</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
